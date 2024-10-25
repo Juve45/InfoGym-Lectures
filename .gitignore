@@ -1,0 +1,34 @@
+# ignore all files that have an extension
+# we want to ignore all files created by latex compilers on local computers
+**/*.*
+
+!.gitignore
+
+# except for these extensions
+!**/*.md
+!**/*.pdf
+
+# include all style files
+!**/*.sty
+
+# include all bibliography files
+!**/*.bib
+
+# include all latex files
+!**/*.tex 
+
+# include all html, css and js files
+!**/*.html
+!**/*.css
+!**/*.js
+
+# include all c++ source files files
+!**/*.cpp
+!**/*.h
+!**/*.hpp
+
+# include all images
+!**/*.png
+!**/*.jpg
+!**/*.jpeg
+
