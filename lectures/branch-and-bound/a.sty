@@ -1,0 +1,96 @@
+
+
+\graphicspath{{figures/}}
+
+\usetheme[progressbar=foot]{metropolis}
+% \usecolortheme{sron}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+
+\definecolor{mDarkTeal}{HTML}{274349}
+\definecolor{mLightBrown}{HTML}{EBA13B}
+
+\definecolor{secondary}{HTML}{296691}
+\definecolor{bg1}{HTML}{556575}
+\definecolor{bg2}{HTML}{708090}
+\definecolor{secondarybg}{HTML}{c8d5db}
+% \setbeamercolor{progress bar}{fg=secondary, bg=secondarybg}
+
+
+\makeatletter
+\setlength{\metropolis@titleseparator@linewidth}{2pt}
+\setlength{\metropolis@progressonsectionpage@linewidth}{2pt}
+\setlength{\metropolis@progressinheadfoot@linewidth}{2pt}
+
+\newcommand\notsotiny{\@setfontsize\notsotiny\@vipt\@viipt}
+
+
+\newcommand\cO{\mathcal{O}}
+\makeatother
+
+\definecolor{mygreen}{rgb}{0.55,0.7,0.5}
+\definecolor{mygray}{rgb}{0.9,0.9,0.9}
+\definecolor{mymauve}{rgb}{0.8,0.65,0.2}
+\definecolor{myblue}{rgb}{0.3,0.3,0.75}
+\definecolor{myred}{rgb}{0.75,0.4,0.4}
+
+\lstset{ %
+  backgroundcolor=\color{mygray},   % choose the background color
+  basicstyle=\notsotiny\color{myred},        % size of fonts used for the code
+  breaklines=true,                 % automatic line breaking only at whitespace
+  captionpos=b,                    % sets the caption-position to bottom
+  tabsize=2,
+  numbersep=2pt,
+  aboveskip=0pt,                   % top margin, especially annoying inside block
+  belowskip=0pt,                   % bottom margin, especially annoying inside block
+  commentstyle=\mdseries\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{myblue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+  identifierstyle=\mdseries\color{mDarkTeal},
+}
+
+
+\metroset{block=fill}
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+
+%----------- FOOTER --------------------------------------------------------
+
+\setbeamercolor{footline}{bg=secondarybg,fg=white}
+\setbeamercolor{footline-center}{bg=bg2,fg=white}
+\setbeamercolor{footline-side}{bg=bg1,fg=white}
+\setbeamerfont{foot-font}{size=\tiny}
+\setbeamertemplate{frame footer}{A footline}
+
+\makeatletter
+\setlength{\metropolis@frametitle@padding}{2.0ex}% <- default 2.2 ex
+
+\setbeamertemplate{footline}{%
+ \hbox{%
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.5ex,dp=1ex,center]{footline-side}%
+    \usebeamerfont{foot-font}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.5ex,dp=1ex,center]{footline-center}%
+    \usebeamerfont{section in foot}\inserttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.5ex,dp=1ex,center]{footline-side}%
+    \usebeamerfont{section in foot} \text{    } \insertframenumber/\inserttotalframenumber
+  \end{beamercolorbox}}%
+
+  \vskip0pt%
+}
+\makeatother
+
+
+
+\usepackage{array,ragged2e}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}} 
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}} 

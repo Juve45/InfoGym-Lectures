@@ -1,0 +1,221 @@
+\documentclass[10pt]{beamer}
+
+\usetheme[progressbar=foot]{metropolis}
+
+\usepackage{amsmath,amsfonts,amssymb,pxfonts,eulervm,xspace}
+\usepackage{graphicx}
+\usepackage{tikz}
+% \usepackage{adjustbox}      
+\usepackage{filecontents}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{listings}
+
+\graphicspath{{figures/}}
+
+\lstset{
+				%framexleftmargin=10mm,
+				breaklines=true,
+				language=C++, 
+				alsoletter=0123456789,
+			    otherkeywords={1, 2, 3, 4, 5, 6, 7, 8, 9, 0},
+				%frame=tb, % draw a frame at the top and bottom of the code block
+   				tabsize=2, % tab space width
+			    showstringspaces=false, % don't mark spaces in strings
+    			numbers=left, % display line numbers on the left    			
+    			numberstyle=\color{black},
+                keywordstyle=\color{blue},
+                stringstyle=\color{yellow!60!red},
+                commentstyle=\color{gray},
+                basicstyle=\color{red},
+                identifierstyle=\color{black},
+                morecomment=[l][\color{green!40!black}]{\#},
+			    keepspaces=true,
+			    numbersep=2ex,
+			    xleftmargin=2.5ex,
+				framexleftmargin=5ex,  
+				%xleftmargin=\parindent,
+   				showtabs=true,
+   				literate=%
+    *{0}{{{\digitcolor{0}}}}1
+    {1}{{{\digitcolor{1}}}}1
+    {2}{{{\digitcolor{2}}}}1
+    {3}{{{\digitcolor{3}}}}1
+    {4}{{{\digitcolor{4}}}}1
+    {5}{{{\digitcolor{5}}}}1
+    {6}{{{\digitcolor{6}}}}1
+    {7}{{{\digitcolor{7}}}}1
+    {8}{{{\digitcolor{8}}}}1
+    {9}{{{\digitcolor{9}}}}1
+}
+
+%-- Header and footer information ----------------------------------
+% \newcommand{\footleft}{http://www.shawnlankton.com/category/latex/}
+% \newcommand{\footcenter}{http://www.shawnlankton.com/category/latex/}
+% \newcommand{\footright}{alexandru.p.ionita@gmail.com}
+
+\usepackage{appendixnumberbeamer}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{amsmath,amsfonts,amssymb,pxfonts,eulervm,xspace}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{adjustbox}      
+\usepackage{filecontents}
+% \usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+
+\usepackage{infogym}
+
+\title{Backtracking Optimizationa \\ Branch and Bound}
+\author{Ioniță \quad Alexandru }
+% \author{Nume \quad Prenume - }
+\institute{Centrul Infogym Iasi}
+
+
+
+% \AtBeginSection[]
+% {
+%   \begin{frame}
+% 	\begin{columns}
+% 	\begin{column}{0.40\linewidth}
+%   \begin{block}{Content}
+% 	\tableofcontents[subsectionstyle=show/shaded, sectionstyle=show/shaded]
+% 	\end{block}
+% 	\end{column}
+% 	\begin{column}{0.40\linewidth}
+% 	\end{column}
+% 	\end{columns}
+%   \end{frame}
+% }
+
+
+%-- Main Document --------------------------------------------------
+\begin{document}
+
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+
+\begin{frame}
+\begin{center}
+ Computer Science - Algorithms\\
+ 11-12 Classes\\
+ Advanced Course
+\\
+\color{gray}
+Subtitle \\
+ 
+\end{center}
+\end{frame}
+
+
+%\section{Overview}
+
+\begin{frame}[allowframebreaks]
+Content
+    \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+
+
+\section{Introdution}
+
+\subsection{Backtracking}
+
+\begin{frame}{\insertsubsection}
+
+      \begin{block}{backtracking}
+      	Generate all solutions
+
+      	\begin{itemize}
+      		\item check if solution is correct
+      	\end{itemize}
+
+      	
+      \end{block}
+
+\end{frame}
+
+
+
+\subsection{Branch and boudn optimizations in Knapsack}
+\begin{frame}
+	
+	\begin{block}{Wht can it be optimized?}
+		\begin{itemize}
+			\pause
+			\item When current weight is bigger than knapsack $\rightarrow$ stop 
+			\pause
+			\item when current sum + heuristic is smaller than best $\rightarrow$ stop
+			\pause
+			\item heuristic for second part: greedy knapsack
+			\pause
+			\item heuristic for initial solution: greedy knapsack
+			\pause
+			\item sort objects greedy
+			\pause
+			\item stop after x seconds
+		\end{itemize}
+		
+		
+	\end{block}
+\end{frame}
+
+
+
+% \section{Case Study}
+
+
+% \begin{frame}{Codeforces 702F - T-shirts}
+
+% \begin{itemize}
+% 	\item Problema cu siruri pare/impare
+% 	\item \url{https://acm.timus.ru/problem.aspx?space=1&num=1439}
+% 	\item Codeforces 702F \url{http://codeforces.com/contest/702/problem/F}	
+% \end{itemize}
+
+
+
+% \end{frame}
+
+
+
+\section{Practice Problems}
+
+
+%%% >>>>> Practice Problems ---------------------------
+\begin{frame}[allowframebreaks]
+
+\begin{thebibliography}{9}
+
+
+\bibitem{knuthwebsite} 
+Infoarena Rucsac \url{https://infoarena.ro/problema/rucsac}
+\bibitem{knuthwebsite} 
+Codeforces Round 44 D - Safe \url{https://codeforces.com/contest/47/problem/D}
+\bibitem{knuthwebsite} 
+abc 325 F \url{https://atcoder.jp/contests/abc325/tasks/abc325_f}
+\bibitem{knuthwebsite} 
+keidei \url{https://kilonova.ro/problems/533}
+
+
+\url{https://acm.timus.ru/problem.aspx?space=1&num=1439} %clasic treap implicit
+
+\end{thebibliography}
+
+\end{frame}
+
+
+%%% <<<<< Practice Problems ---------------------------
+
+
+
+
+\end{document}
